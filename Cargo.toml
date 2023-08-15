@@ -1,0 +1,32 @@
+[patch.crates-io]
+ss58-registry = { git = "https://github.com/goro-network/ss58-registry", rev = "984cc02" }
+
+[package]
+name = "serial-read-contract"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytes = "1.4.0"
+futures = "0.3.28"
+tokio-serial = "5.4.4"
+tokio-util = { version = "0.7.8", features = ["codec"] }
+anyhow = "1.0.71"
+contract-metadata = "3.0.1"
+contract-transcode = "3.0.1"
+env_logger = "0.10.0"
+hex = "0.4.3"
+jsonrpsee = { version = "0.18.2", features = ["full"] }
+log = { version = "0.4.19", features = ["max_level_debug", "release_max_level_info"] }
+pallet-contracts-primitives = "23.0.0"
+parity-scale-codec = { version = "3.6.3", features = ["full"] }
+scale-info = "2.7.0"
+serde = { version = "1.0.171", features = ["derive"] }
+serde_json = "1.0.102"
+sp-core = { version = "20.0.0", features = ["serde"] }
+ss58-registry = { git = "https://github.com/goro-network/ss58-registry", rev = "984cc02", version = "1.41.0" }
+subxt = "0.28.0"
+thiserror = "1.0.43"
+tokio = { version = "1.29.1", features = ["full"] }
